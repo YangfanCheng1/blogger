@@ -56,7 +56,7 @@ public class UserController {
 
         try {
             final String username = jwtUtil.extractUsername(token);
-            return ResponseEntity.ok(UserResponse.of("Welcome " + username, null));
+            return ResponseEntity.ok(UserResponse.of(username, null));
         } catch (Exception ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(UserResponse.of("Not session available", null));
         }
