@@ -14,8 +14,9 @@ import java.util.stream.Collectors;
 public class ThreadController {
 
     private final List<Post> posts = Arrays.asList(
-            Post.builder().id("1").op("JohnDoe").title("Check this out").description("Some description about this post").build(),
-            Post.builder().id("2").op("JaneDoe").title("Check this out").description("Some description about this post").build()
+            Post.builder().id("1").op("JohnDoe").title("Check this out").description("Some description about this post, " +
+                    "let's have more text in this post I am just trying to type whatever comes to my midnd, and hopefully it would testo ut my changes").build(),
+            Post.builder().id("2").op("JaneDoe").title("Hello").description("Some description about this post").build()
     );
 
     @GetMapping("/posts")
